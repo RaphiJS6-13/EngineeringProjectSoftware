@@ -2,10 +2,15 @@
 #include "SwingMachine.hpp"
 
 
-void setup() {
-	for (int count = (int) FIRSTPIN; count < (int) FIRSTPIN + 7; count++) {
-		pinMode(count, OUTPUT);
+void setup()
+{
+	int first = (int) core::FIRST_PIN; // `int' and `const int' are incompatible
+	int last = first + 6; // six motors
+	
+	for(int pin = first; pin <= last; pin++) {
+		pinMode(pin, OUTPUT);
 	}
+	
 	core::init();
 	core::run();
 	core::deinit();
