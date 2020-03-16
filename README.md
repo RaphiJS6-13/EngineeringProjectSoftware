@@ -1,6 +1,6 @@
 # EngineeringProjectSoftware
 <h3>Disclaimer:</h3>
-This code is written for academic purposes. It isn't a developer's project.  
+This code is written for academic purposes, it is not a developer's project.  
 <br/>
 
 ```C++
