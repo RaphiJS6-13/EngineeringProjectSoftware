@@ -3,6 +3,7 @@
 #pragma once
 
 namespace core {
+	const int START_PIN = 5; // might be something other than 5
 	Servo * left;
 	Servo * back;
 	Servo * right;
@@ -12,14 +13,14 @@ namespace core {
 		back = (Servo *) malloc(sizeof(Servo) * 2);
 		right = (Servo *) malloc(sizeof(Servo) * 2);
 		
-		left->attach(5);
-		(left+1)->attach(6);
+		left->attach(START_PIN);
+		(left+1)->attach(START_PIN + 1);
 		
-		back->attach(7);
-		(back+1).attach(8);
+		back->attach(START_PIN + 2);
+		(back+1).attach(START_PIN + 3);
 		
-		right->attach(9);
-		(right+1)->attach(10);
+		right->attach(START_PIN + 4);
+		(right+1)->attach(START_PIN + 5);
 	}
 	
 	void deinit() {
