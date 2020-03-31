@@ -17,7 +17,7 @@ namespace core {
 		(left+1)->attach(START_PIN + 1);
 		
 		back->attach(START_PIN + 2);
-		(back+1).attach(START_PIN + 3);
+		(back+1)->attach(START_PIN + 3);
 		
 		right->attach(START_PIN + 4);
 		(right+1)->attach(START_PIN + 5);
