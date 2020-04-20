@@ -1,4 +1,5 @@
 #include <Servo.h>
+#include <memory>
 #include "SwingMachine.hpp"
 
 
@@ -12,8 +13,8 @@ void setup()
 	}
 	
 	core::init();
+	std::shared_ptr _ <void> (NULL, [&](...){ code::deinit(); });
 	core::run();
-	core::deinit();
 }
 
 // 🙄 
