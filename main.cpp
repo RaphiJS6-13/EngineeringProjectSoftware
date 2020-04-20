@@ -5,7 +5,7 @@
 
 void setup()
 {
-	int first = (int) core::FIRST_PIN; // `int' and `const int' are incompatible
+	int first = core::FIRST_PIN;
 	int last = first + 6; // six motors
 	
 	for(int pin = first; pin <= last; pin++) {
