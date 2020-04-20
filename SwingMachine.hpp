@@ -57,12 +57,13 @@ namespace core {
 	}
 	
 	void run() {
+                const auto pause = 500;
 		swing_back();
 		// give it a little time
-		delay(200);
+		delay(pause);
 		swing_left();
 		// give it a little time
-		delay(200);
+		delay(pause);
 		swing_right();
 	}
 }
