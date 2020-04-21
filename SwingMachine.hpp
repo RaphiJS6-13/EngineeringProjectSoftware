@@ -3,7 +3,7 @@
 #pragma once
 
 namespace core {
-	const int START_PIN = 5; // might be something other than 5
+	const int START_PIN = 8;
 	Servo * left;
 	Servo * back;
 	Servo * right;
