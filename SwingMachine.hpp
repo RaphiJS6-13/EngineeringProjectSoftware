@@ -66,4 +66,6 @@ namespace core {
 		delay(pause);
 		swing_right();
 	}
+	
+	#include "button.hpp"
 }
