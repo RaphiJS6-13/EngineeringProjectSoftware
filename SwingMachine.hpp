@@ -3,6 +3,9 @@
 #pragma once
 
 namespace core {
+	
+	#include "button.hpp"
+	
 	const int START_PIN = 8;
 	Servo * left;
 	Servo * back;
@@ -66,6 +69,4 @@ namespace core {
 		delay(pause);
 		swing_right();
 	}
-	
-	#include "button.hpp"
 }
