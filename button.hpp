@@ -14,7 +14,7 @@ namespace button {
   bool waitForPress(void (* callback)())
   {
     while (!isPressed())
-      delay();
+      delay(10);
     
     (*callback)();
     
