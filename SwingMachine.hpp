@@ -12,6 +12,8 @@ namespace core {
 	Servo * right;
 	
 	void init() {
+		button::init();
+		
 		left = (Servo *) malloc(sizeof(Servo) * 2);
 		back = (Servo *) malloc(sizeof(Servo) * 2);
 		right = (Servo *) malloc(sizeof(Servo) * 2);
@@ -58,15 +60,17 @@ namespace core {
 		(right+1)->write(180);
 		delay(1000);
 	}
-	
-	void run() {
-                const auto pause = 500;
+	void callback() {
+		const int PAUSE = 500;
 		swing_back();
 		// give it a little time
-		delay(pause);
+		delay(PAUSE);
 		swing_left();
 		// give it a little time
-		delay(pause);
+		delay(PAUSE);
 		swing_right();
+	}
+	void run() {
+                button::waitForPress(&callback);
 	}
 }
