@@ -11,7 +11,7 @@ namespace button {
     return digitalRead(BUTTON_PIN) == HIGH;
   }
   
-  bool waitForPress(void (* callback)())
+  void waitForPress(void (* callback)())
   {
     while (!isPressed())
       delay(10);
