@@ -4,7 +4,7 @@
 
 void setup()
 {
-	int first = core::FIRST_PIN;
+	int first = core::START_PIN;
 	int last = first + 6; // six motors
 	
 	for(int pin = first; pin <= last; pin++)
