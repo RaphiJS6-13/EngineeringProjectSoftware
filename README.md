@@ -11,9 +11,9 @@ namespace core {
 	  	inline bool isPressed();
 	  	void waitForPress(void (* callback)());
 	}
-	const int FIRST_PIN;
-	void init(void);
-	void run(void);
-	void deinit(void);
+	const int START_PIN;
+	void init();
+	void run();
+	void deinit();
 }
 ```
