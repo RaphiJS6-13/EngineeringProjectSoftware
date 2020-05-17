@@ -14,9 +14,9 @@ namespace core {
 	void init() {
 		button::init();
 		
-		left = (Servo *) malloc(sizeof(Servo) * 2);
-		back = (Servo *) malloc(sizeof(Servo) * 2);
-		right = (Servo *) malloc(sizeof(Servo) * 2);
+		left = new Servo[2];
+		back = new Servo[2];
+		right = new Servo[2];
 		
 		left->attach(START_PIN);
 		(left+1)->attach(START_PIN + 1);
@@ -29,9 +29,9 @@ namespace core {
 	}
 	
 	void deinit() {
-		free(left);
-		free(back);
-		free(right);
+		delete back;
+		delete left;
+		delete right;
 	}
 	
 	void swing_left() {
